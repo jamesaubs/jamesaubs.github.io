@@ -3,7 +3,7 @@
   
   "title": {
     "text": "Comparing Covid Cases at University and Home",
-    "subtitle":"New Cases by Specimen Date",
+    "subtitle":"New Cases by Rolling Date",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
