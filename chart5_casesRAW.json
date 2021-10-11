@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/casedata.csv",
+      "url": "casedata.csv",
       "format": {"type": "csv"}
     },
   
