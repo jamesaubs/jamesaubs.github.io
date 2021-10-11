@@ -21,9 +21,9 @@ h1, h3, h4, h5, h6, p{
 }
 
 .dashboardButton{
-    background-color: transparent;
-    border: 1px solid rgb(126, 114, 114);
-    color: rgb(126, 114, 114);
+    background-color: solid;
+    border: 1px solid rgb(0,0,0);
+    color: rgb(0,0,0);
     font-family: 'Roboto', sans-serif;
     line-height: 16px;
     font-weight: 600;
