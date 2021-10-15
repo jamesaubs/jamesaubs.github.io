@@ -7,7 +7,7 @@ body{
 }
 
 .header{
-    background: black;
+    background: rgb(0,0,0);
     width: 100%;
     max-width: 500px;
     padding: 1px;
