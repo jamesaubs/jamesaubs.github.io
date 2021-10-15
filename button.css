@@ -21,3 +21,7 @@
     transition: border-color,background-color .5s ease;
     white-space: nowrap;
   }
+
+.button1:hover{
+    background-color: #FFFFFF;
+}  
