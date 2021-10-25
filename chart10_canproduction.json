@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/data_FRED-CANPROINDMISMEI.json",
+       "format": {
+           "type":"json",
+           "property": "observations"}},
+
+
+    "title": {
+        "text": "Production of Total Industry in Canada",
+        "subtitle": "Index 2015=100, Seasonally Adjusted",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":400,
+    "height":300,
+
+    "mark":{
+        "type": "line",
+        "color":"seagreen",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+
+    "encoding": {
+      "x": {
+          "field": "date",
+          "type": "temporal",
+          "title":null},
+      "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title":null}
+    }
+}
