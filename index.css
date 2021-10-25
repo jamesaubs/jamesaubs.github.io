@@ -1,6 +1,5 @@
 /* This is my first proper css file */
 
-@mediascreen and (max-width:450px) {
 body{
     background-color: rgb(105,105,105);
     max-width: 500px;
@@ -32,4 +31,4 @@ h3{
     border-radius: 5px;
     border-color: #404040;
 }
-}
+
