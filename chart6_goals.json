@@ -156,12 +156,9 @@
                             "strokeOpacity": {
                                 "value": 1
                             }
-                        },
-                        "hover": {
-                            "strokeOpacity": {
-                                "value": 0.5
-                            }
                         }
+
+                        
                     }
                 }
             ]
