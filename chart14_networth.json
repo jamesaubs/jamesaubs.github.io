@@ -1,50 +1,27 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "SAS litter",
-    "title": {
-  
-      "text": "Age of Top 10 World Billionaires",
-  
-      "subtitle": "Provided by the 35th annual Forbes list",
-  
-      "subtitleFontStyle":"italic",
-  
-      "subtitleFontSize":10,
-  
-      "anchor": "start",
-  
-      "color": "black"
-   },
-  
-    "data": {"url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/networth_data.csv"},
-    "mark":{
-  
-   
-  
-        "type": "bar",
-  
-        "color": "#B0C4DE",
-  
-        "strokeWidth":2,
-  
-        "opacity":1
-  
-   
-  
-      },
-    "height": 300,
-    "width": 250,
-  
-    "encoding": {
-      "y": {"field": "Name", "type": "ordinal", "sort":[], "title": null},
-  
-  
-  
-  
-      "x": {"field": "Age", "type": "quantitative", "title": null, "scale": {"domain": [0, 100]}}
-   
-  
-      }
-  
-  
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "SAS litter",
+  "title": {
+    "text": "Net Worth of Top 10 World Billionaires",
+    "subtitle": "Provided by the 35th annual Forbes list",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/networth2_data.csv"
+  },
+  "mark": {"type": "bar", "color": "#B0C4DE", "strokeWidth": 2, "opacity": 1},
+  "height": 300,
+  "width": 250,
+  "encoding": {
+    "y": {"field": "Name", "type": "ordinal", "sort": [], "title": null},
+    "x": {
+      "field": "Net worth (USD)",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [0, 180]}
+    }
   }
+}
