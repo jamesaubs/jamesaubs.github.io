@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "UK Output per hour worked % change per annum SA",
+        "subtitle": "From 1972 to 2020. Source: ONS",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/series-241121.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "height": 300,
+    "width": 400,
+    "mark": {
+        "type": "bar",
+        "point": false,
+        "color": "cadetblue"
+    },
+    "encoding": {
+        "x": {
+            "field": "year",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": false,
+                "labelSeparation": 10
+            }
+        },
+        "y": {
+            "field": "output",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true
+            }
+        }
+    }
+}
