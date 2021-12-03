@@ -20,7 +20,7 @@
     }
   ],
   "height": 300,
-  "width": 380,
+  "width": 375,
   "mark": {"type": "bar", "point": false},
   "encoding": {
     "x": {
