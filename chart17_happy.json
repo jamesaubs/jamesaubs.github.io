@@ -16,7 +16,7 @@
   "height": 300,
   "width": 350,
   "encoding": {
-    "y": {"field": "country", "type": "ordinal", "sort": "x", "title": null},
+    "y": {"field": "country", "type": "ordinal", "sort": "-x", "title": null},
     "x": {
       "field": "pop2021",
       "type": "quantitative",
