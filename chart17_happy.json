@@ -14,7 +14,7 @@
   },
   "mark": {"type": "bar", "color": "#8fb85bb2", "strokeWidth": 2, "opacity": 1},
   "height": 300,
-  "width": 250,
+  "width": 350,
   "encoding": {
     "y": {"field": "country", "type": "ordinal", "sort": "x", "title": null},
     "x": {
