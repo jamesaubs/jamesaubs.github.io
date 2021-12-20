@@ -13,7 +13,7 @@
         "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/mexpend.csv"
     },
     "height": 300,
-    "width": 360,
+    "width": 370,
     "mark": {
         "type": "line",
         "point": false,
