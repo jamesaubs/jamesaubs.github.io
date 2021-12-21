@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "SAS litter",
     "title": {
-        "text": "Relating Population and Happiness Levels",
+        "text": "Relating Population and Happiness Levels in 2021",
         "subtitle": "Source: World Population Review",
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
