@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+  "title": {
+      "text": "Annual CO2 Emissions of the Top Four Emitters",
+      "subtitle":"From 1900 to 2020. Source: Our World in Data",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "description": "Co2 Emissions",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/co2.csv",
+      "format": {"type": "csv"}
+    },
+  
+    "height": 300,
+    
+    "width": 360,
+    
+    "mark": {"type": "bar", "width":10},
+    
+    "selection": {
+      "Region": {
+        "type": "single",
+        "fields": ["Entity"],
+        "bind": {
+          "input": "select",
+          "options": [
+            "Japan",
+            "India",
+            "United States",
+            "China"
+          ],
+          "name": "Pick a Country: "
+        }
+      }
+    },
+    "transform": [
+      
+      {"filter": {"selection": "Region"}},
+      {
+        "filter": {
+          "field": "Year",
+          "range": [
+            {"year": 1900},
+            {"year": 2020}
+          ]
+        }
+      }
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Year", 
+        "type": "temporal", 
+        "title": null,
+        "axis": {"grid": false, "labelSeparation": 10}
+        },
+      "y": {
+        "field": "Annual CO2 emissions",
+        "type": "quantitative",
+        "title": null
+      },
+      
+      "color": {
+        "field": "Country",
+        "type": "nominal",
+        "legend": null,
+        "scale": {"scheme": "set3"}
+      },
+  
+          "tooltip": [
+          {"field": "Annual CO2 emissions", "type": "quantitative", "title": "CO2 Emissions", "format":","},
+           {"field": "Year", "type": "temporal", "title": "Year"}
+  
+              ]  
+    }
+  }
