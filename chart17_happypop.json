@@ -25,7 +25,7 @@
         "y": {
             "field": "country",
             "type": "ordinal",
-            "sort": "-x",
+            "sort": [],
             "title": null
         },
         "x": {
