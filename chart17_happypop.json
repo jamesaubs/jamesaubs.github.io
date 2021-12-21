@@ -12,18 +12,10 @@
     "data": {
         "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/happydata.csv"
     },
-    "params": [
-        {
-            "name": "highlight",
-            "select": {
-                "type": "point",
-                "on": "mouseover"
-            }
-        }
-    ],
+
     "mark": {
         "type": "bar",
-        "color": "#8fb85bb2",
+        "color": "#9cd84ed8",
         "strokeWidth": 2,
         "opacity": 1
     },
@@ -41,13 +33,7 @@
             "type": "quantitative",
             "title": "Population '000s"
         },
-        "fillOpacity": {
-            "condition": {
-                "param": "highlight",
-                "value": 1
-            },
-            "value": 0.6
-        },
+
         "tooltip": [
             {
                 "field": "rank",
@@ -59,7 +45,6 @@
                 "type": "quantitative",
                 "title": "Happiness Value 2020"
             }
-
         ]
     }
 }
