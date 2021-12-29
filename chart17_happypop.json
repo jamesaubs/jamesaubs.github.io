@@ -9,15 +9,7 @@
         "anchor": "start",
         "color": "black"
     },
-    "params": [
-        {
-            "name": "highlight",
-            "select": {
-                "type": "point",
-                "on": "mouseover"
-            }
-        }
-    ],
+
     "data": {
         "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/happydata.csv"
     },
@@ -40,13 +32,6 @@
             "field": "pop2021",
             "type": "quantitative",
             "title": "Population '000s"
-        },
-        "fillOpacity": {
-            "condition": {
-                "param": "highlight",
-                "value": 1
-            },
-            "value": 0.6
         },
         "tooltip": [
             {
