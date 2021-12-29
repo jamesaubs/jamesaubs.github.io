@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Obesity rates by country in 2021. Map of the world is obtained by using topojson file from deldersveld public GitHub repository.",
+    "title": {
+        "text": "Obesity Rates by Country",
+        "subtitle": "Percentage of obese adults in 2021. Source: World Population Review",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "width": 500,
+    "height": 300,
+    "data": {
+        "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json",
+        "format": {
+            "type": "topojson",
+            "feature": "countries1"
+        }
+    },
+    "transform": [
+        {
+            "lookup": "properties.name",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/worldmap.csv"
+                },
+                "key": "country",
+                "fields": [
+                    "obesityRate"
+                ]
+            }
+        }
+    ],
+    "projection": {
+        "type": "equalEarth"
+    },
+    "mark": "geoshape",
+    "encoding": {
+        "color": {
+            "field": "obesityRate",
+            "title": "Rate (%)",
+            "type": "quantitative",
+            "scale": {
+                "scheme": "yellowgreenblue"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "properties.name",
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "field": "obesityRate",
+                "type": "quantitative",
+                "title": "Rate (%)"
+            }
+        ]
+    }
+}
