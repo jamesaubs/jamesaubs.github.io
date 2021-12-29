@@ -9,7 +9,7 @@
         "anchor": "start",
         "color": "black"
     },
-    "width": 500,
+    "width": 400,
     "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json",
