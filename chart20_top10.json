@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Top Ten 2020 GDP Values vs Their 2021 Obesity Rates",
+        "subtitle": "Source: World Bank and World Population Review",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/world10.csv"
+    },
+    "height": 240,
+    "width": 240,
+    "mark": {
+        "type": "circle",
+        "size": 150
+    },
+    "encoding": {
+        "x": {
+            "field": "GDP",
+            "type": "quantitative",
+            "title": "GDP (Billion US$)"
+        },
+        "y": {
+            "field": "obesityRate",
+            "type": "quantitative",
+            "title": "Obesity Rate (%)"
+        },
+        "color": {
+            "field": "country",
+            "title": "Country",
+            "scale": {
+                "scheme": "viridis"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "country",
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "field": "GDP",
+                "type": "quantitative",
+                "title": "GDP",
+                "format": ","
+            },
+            {
+                "field": "obesityRate",
+                "type": "quantitative",
+                "title": "Obesity Rate",
+                "format": ",.0f"
+            }
+        ]
+    }
+}
