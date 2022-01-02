@@ -50,8 +50,7 @@
             {
                 "field": "obesityRate",
                 "type": "quantitative",
-                "title": "Obesity Rate",
-                "format": ",.0f"
+                "title": "Obesity Rate"
             }
         ]
     }
