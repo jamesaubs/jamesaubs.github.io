@@ -1,0 +1,113 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "title": {
+        "text": "Average Annual Hours Worked Across Various Areas",
+        "subtitle": "Between 2000 and 2020. Source: OECD",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "description": "Coronavirus cases",
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/hoursworked.csv"
+    },
+    "height": 300,
+    "width": 335,
+    "config": {
+        "background": "#FfFfFf"
+    },
+    "mark": {
+        "type": "line",
+        "point": true
+    },
+    "selection": {
+        "region": {
+            "type": "multi",
+            "fields": [
+                "LOCATION"
+            ],
+            "bind": "legend"
+        }
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "LOCATION",
+                "oneOf": [
+                    "USA",
+                    "GBR",
+                    "JPN",
+                    "CAN",
+                    "ITA",
+                    "FRA",
+                    "DEU",
+                    "EU27"
+                ]
+            }
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "TIME",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "labelSeparation": 10
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": false
+            },
+            "scale": {
+                "domain": [
+                    "1000",
+                    "2000"
+                ]
+            }
+        },
+        "color": {
+            "field": "LOCATION",
+            "type": "nominal",
+            "scale": {
+                "scheme": "set2"
+            },
+            "title": null,
+            "legend": {
+                "orient": "right",
+                "columns": 1
+            }
+        },
+        "opacity": {
+            "condition": {
+                "selection": "region",
+                "value": 1
+            },
+            "value": 0.1
+        },
+        "tooltip": [
+            {
+                "field": "TIME",
+                "type": "temporal",
+                "title": "Year",
+                "format": "%Y"
+            },
+            {
+                "field": "LOCATION",
+                "type": "nominal",
+                "title": "Area"
+            },
+            {
+                "field": "Value",
+                "type": "nominal",
+                "title": "Hours Worked",
+                "format": ","
+            }
+        ]
+    }
+}
