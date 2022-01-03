@@ -29,7 +29,7 @@
         }
     ],
     "height": 300,
-    "width": 375,
+    "width": 340,
     "mark": {
         "type": "line",
         "point": true,
