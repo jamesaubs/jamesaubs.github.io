@@ -1,0 +1,94 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Average Annual Hours Worked Across Various Areas",
+        "subtitle": "Between 2000 and 2020. Source: OECD",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/hoursworked.csv"
+    },
+    "transform": [
+        {
+            "filter": {
+                "field": "LOCATION",
+                "oneOf": [
+                    "USA",
+                    "GBR",
+                    "JPN",
+                    "CAN",
+                    "ITA",
+                    "FRA",
+                    "DEU",
+                    "EU27"
+                ]
+            }
+        }
+    ],
+    "height": 300,
+    "width": 375,
+    "mark": {
+        "type": "line",
+        "point": true,
+        "filled": false
+    },
+    "encoding": {
+        "x": {
+            "field": "TIME",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "labelSeparation": 10
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": false
+            },
+            "scale": {
+                "domain": [
+                    "1000",
+                    "2000"
+                ]
+            }
+        },
+        "color": {
+            "field": "LOCATION",
+            "type": "nominal",
+            "scale": {
+                "scheme": "set2"
+            },
+            "title": "Area",
+            "legend": {
+                "orient": "right",
+                "fillColor": "#FcFdFd"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "LOCATION",
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "field": "TIME",
+                "type": "temporal",
+                "format": "%Y",
+                "title": "Year"
+            },
+            {
+                "field": "Value",
+                "type": "quantitative",
+                "title": "Hours Worked",
+                "format": ","
+            }
+        ]
+    }
+}
