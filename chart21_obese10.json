@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plot of ten countries with highest 2021 obesity rates against their corresponding 2020 GDP.",
     "title": {
         "text": "Countries with High 2021 Obesity Rates vs Their 2020 GDP Values",
         "subtitle": "Source: World Bank and World Population Review",
