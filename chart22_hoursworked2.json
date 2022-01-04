@@ -8,7 +8,7 @@
         "anchor": "start",
         "color": "black"
     },
-    "description": "Coronavirus cases",
+    "description": "Line chart mapping average annual hours worked across various areas. It is defined as the total number of hours actually worked per year divided by the average number of people in employment per year.",
     "data": {
         "url": "https://raw.githubusercontent.com/jamesaubs/jamesaubs.github.io/main/hoursworked.csv"
     },
