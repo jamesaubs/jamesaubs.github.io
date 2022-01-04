@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Line chart that uses repeated layers to make multiple calls to json files",
+    "description": "Line chart that uses repeated layers to make multiple calls to json files. See the following link for my API loop, https://colab.research.google.com/drive/1LBWY4aIy-uhdwMOI0GxrI5dR99lGEJGR?usp=sharing",
     "title": {
         "text": "Mapping Global Prices of Cooking Oils",
         "subtitle": "Red = Olive Oil, Green = Soyabeans Oil, Blue = Palm Oil. Source: FRED",
