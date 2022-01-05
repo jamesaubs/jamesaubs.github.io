@@ -24,15 +24,20 @@
 </head>
 
 <body>
-    <h1>Data Visualisation Project</h1>
+    <h1>James Aubrey - Data Science 2021.</h1>
 
       <div class="wrap">
     <a class="dashboardButton" href="index">Portfolio</a>
   </div>
     
-    <h2>Intro</h2>
+    <h2>Portfolio</h2>
+    <p>This is where I will store my work for the project</p>
     
-    <p>Project demo page text here.</p>
+    <h3>Aims</h3>
+    <p>The main aim of my project is to understand whether a positive causal link exists between levels of GDP and obesity rates of countries across the globe.</p>
+    
+    <h3>Chart 1</h3>
+    <p>To start assessing this theory, I began by mapping out 2021 obesity rates to visualise where geographically the levels are highest. To have this clearly represented by my chart I decided to use a map of the world using a topojson file from deldersveld public GitHub repository. Having then downloaded a csv file containing each countries rate from the ‘World Population Review’, I could quickly create a near completed version of the globe. However, due to the fact that certain names did not align within my csv file, I had to manually check where the gaps were and alter the names to match the topojson file. Having completed this, the map allowed me to see that there was not a clear trend of large economies having consistently high obesity rates, leading me to question my original hypothesis.</p>
     
       <!--Chart 19 -->
   <div class="chart" id="chart19">
@@ -42,7 +47,8 @@
     </script>
   </div>
     
-    <p> </p>
+    <h3>Chart 2</h3>
+    <p>In order to asses this further, I created a scatter plot of the top 10 largest economies and their corresponding obesity rates. The GDP data was sourced from a csv file provided by the ‘World Bank’. By then taking the top 10 countries and locating their obesity rates from the original csv file, it was simple to generate my chart. It was interesting to see that there was a large disparity in rates with countries that had comparable GDP figures. Even for a country such as China, with the second largest GDP value, their obesity rate is the fourth lowest of the top 10. It only seemed that the United States was supporting the idea of this causal relationship and led to me investigate why this was later on.</p>
     
           <!--Chart 20 -->
   <div class="chart" id="chart20">
@@ -52,7 +58,8 @@
     </script>
   </div>
     
-    <p> </p>
+    <h3>Chart 3</h3>
+    <p>By comparing this to another scatter plot with countries that have high levels of obesity and their corresponding GDP values, stronger conclusions can be made to whether this relationship exists. However, upon filtering my original csv file it was clear that many countries had very high obesity rates, but a very small population. Therefore, in order to improve my analysis I only included countries with a population over xyz. The United States was originally included in this top 10, however due to their far greater GDP value, the graph was unable to show any relationship. This led me to find that these new 10 countries had obesity rates above all the previous countries, excluding the United States, and had significantly lower levels of GDP, meaning that my original claim regarding the relationship was not true.</p>
     
               <!--Chart 21 -->
   <div class="chart" id="chart21">
@@ -62,7 +69,10 @@
     </script>
   </div>
     
-    <p> </p>
+    <p>I was intrigued to find out why the United States did fit my hypothesis. By doing additional reading into the United States obesity problem, it was clear that there was no singular answer. But two reasons did stand out to me during this research and I decided to map these in order to understand this anomaly.</p>
+    
+    <h3>Chart 4</h3>
+    <p>Using a csv file sourced from the ‘OECD’ I was able to map the average annual hours worked over time. It helped me see that the United States has been working more hours on average than any other G7 country since 2011. The levels have been very consistent and did not drop off in 2020, when most others did. This provides a reason as to why obesity may be such an issue simply due to many Americans not having the time to exercise or prepare healthy meals.</p>
     
               <!--Chart 22 -->
   <div class="chart" id="chart22">
@@ -72,7 +82,8 @@
     </script>
   </div>
     
-        <p> </p>
+     <h3>Chart 5</h3>
+    <p>The BBC wrote in 2017 that ‘vegetable oil, specifically soy bean oil and palm oil, are two of the eight ingredients, …that are now estimated to provide a staggering 85% of the world's calories.’ These types of oils are a cheaper alternative to traditional oils, meaning that calorific food can be priced at a lower level. To show the difference in price I mapped the global price of two vegetable oils against olive oil. I used Google Collaboratory to make an API loop from the FRED database providing me with three json files. Layering the three data sources I was able to map out the prices over time. I did find that without manually adding the name of the oil to each line of the json file, I was unable to create a legend for this chart, but the corresponding colours can be found in the sub heading. This chart showed the clear price competitiveness of these new oils, providing a supportive statement that the food can be priced at a lower, more attractive level to these busy Americans.</p>
     
               <!--Chart 23 -->
   <div class="chart" id="chart23">
@@ -81,6 +92,9 @@
       vegaEmbed('#chart23', myChart23);
     </script>
   </div>
+    
+     <h3>Conclusion</h3>
+    <p>In conclusion, it is clear to say that having high levels of GDP does not cause increased levels of obesity in most cases. However, by delving into why the United States did follow this trend, there are clear reasons as to why their obesity problem is so severe.</p>
   
 </body>
   
