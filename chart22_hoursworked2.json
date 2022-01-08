@@ -91,16 +91,16 @@
             "value": 0.1
         },
         "tooltip": [
+                        {
+                "field": "LOCATION",
+                "type": "nominal",
+                "title": "Area"
+            },
             {
                 "field": "TIME",
                 "type": "temporal",
                 "title": "Year",
                 "format": "%Y"
-            },
-            {
-                "field": "LOCATION",
-                "type": "nominal",
-                "title": "Area"
             },
             {
                 "field": "Value",
