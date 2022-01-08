@@ -45,13 +45,13 @@
             {
                 "field": "GDP",
                 "type": "quantitative",
-                "title": "GDP",
+                "title": "GDP (Billion US$)",
                 "format": ","
             },
             {
                 "field": "obesityRate",
                 "type": "quantitative",
-                "title": "Obesity Rate"
+                "title": "Obesity Rate (%)"
             }
         ]
     }
